@@ -1,0 +1,475 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
+
+body {
+  background: #f8f8f8; }
+
+div.container {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  @media (max-width: 1200px) {
+    div.container {
+      width: 100%; } }
+
+div.top-menu {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+  div.top-menu ul li {
+    display: inline-block; }
+    div.top-menu ul li a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      display: block;
+      padding: 10px;
+      color: #444;
+      text-decoration: none; }
+      div.top-menu ul li a:hover {
+        background: #f2f2f2; }
+      div.top-menu ul li a i {
+        margin-right: 5px; }
+
+header {
+  padding: 10px 20px;
+  background: #fff; }
+  header::after {
+    content: "";
+    clear: both;
+    display: block; }
+  header .header-left {
+    float: left;
+    width: 60%; }
+    header .header-left h1.title a {
+      text-decoration: none;
+      color: #222; }
+    @media (max-width: 768px) {
+      header .header-left {
+        width: 100%; } }
+  header .header-right {
+    float: right;
+    padding-top: 40px;
+    width: 40%; }
+    @media (max-width: 768px) {
+      header .header-right {
+        width: 100%; } }
+    header .header-right input[type="text"] {
+      padding: 8px 10px;
+      border: none;
+      background: #eee;
+      width: 68%;
+      float: left; }
+      @media (max-width: 768px) {
+        header .header-right input[type="text"] {
+          float: none; } }
+    header .header-right input[type="submit"] {
+      float: left;
+      width: 30%;
+      padding: 8px 10px;
+      background: #ED0606;
+      border: none;
+      color: #fff; }
+      @media (max-width: 768px) {
+        header .header-right input[type="submit"] {
+          float: none; } }
+
+#request #request-header {
+  padding: 10px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px; }
+  #request #request-header h2 {
+    font-size: 1.5em; }
+#request #request-body {
+  padding: 10px; }
+  #request #request-body #request-form {
+    margin-bottom: 30px; }
+    #request #request-body #request-form form::after {
+      content: "";
+      clear: both;
+      display: block; }
+    #request #request-body #request-form form textarea {
+      width: 100%;
+      background: #f8f8f8;
+      border: 1px solid #eee;
+      border-radius: 3px;
+      padding: 10px 10px;
+      display: block; }
+    #request #request-body #request-form form input[type="submit"] {
+      display: block;
+      padding: 10px 10px;
+      background: #F43C0A;
+      color: #fff;
+      border: none;
+      width: 100%;
+      margin-top: 4px;
+      border-radius: 3px; }
+  #request #request-body #request-list h2 {
+    margin: 10px 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px; }
+  #request #request-body #request-list ul {
+    list-style: none; }
+    #request #request-body #request-list ul li {
+      padding: 5px 0; }
+      #request #request-body #request-list ul li div.card-request {
+        border-radius: 4px;
+        border: 2px solid #ccc;
+        margin: 5px;
+        padding: 10px;
+        background: #fff; }
+        #request #request-body #request-list ul li div.card-request h4 {
+          padding: 5px 0px; }
+        #request #request-body #request-list ul li div.card-request hr {
+          border: none;
+          border-bottom: 1px solid #eee;
+          margin: 5px 0; }
+
+nav {
+  background: #fff;
+  padding: 10px 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+  @media (max-width: 768px) {
+    nav {
+      padding: 0; } }
+  nav ul {
+    display: block;
+    background: #f8f8f8;
+    border-radius: 3px; }
+    @media (max-width: 768px) {
+      nav ul {
+        border-radius: 0; } }
+    nav ul li {
+      list-style: none;
+      display: inline-block; }
+      @media (max-width: 768px) {
+        nav ul li {
+          display: block; } }
+      nav ul li a {
+        color: #444;
+        font-weight: 500;
+        font-size: 13px;
+        display: block;
+        text-decoration: none;
+        padding: 5px 12px; }
+        @media (max-width: 768px) {
+          nav ul li a {
+            font-size: 12px;
+            padding: 10px 30px;
+            border-bottom: 1px solid #eee; } }
+        nav ul li a:hover {
+          background: #eeeeee; }
+
+#breadcrumb {
+  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px; }
+  #breadcrumb ul {
+    list-style: none; }
+    #breadcrumb ul li {
+      display: inline-block; }
+      #breadcrumb ul li:last-child a {
+        cursor: default;
+        color: #333; }
+      #breadcrumb ul li > span {
+        color: #111;
+        font-weight: 400; }
+      #breadcrumb ul li a {
+        font-family: Sans-Serif;
+        padding: 10px 10px;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #F4A01B;
+        line-height: 20px;
+        text-decoration: none; }
+        #breadcrumb ul li a:hover {
+          color: #888; }
+        #breadcrumb ul li a i {
+          margin-right: 10px; }
+
+div.row {
+  background: #fff;
+  padding: 10px 20px; }
+  @media (max-width: 768px) {
+    div.row {
+      padding: 0; } }
+  div.row::after {
+    content: "";
+    clear: both;
+    display: block; }
+  div.row section.content {
+    padding: 10px;
+    width: 70%;
+    background: #fff;
+    float: left;
+    border-right: 1px solid #eee; }
+    @media (max-width: 768px) {
+      div.row section.content {
+        padding: 0;
+        width: 100%; } }
+    div.row section.content div.list-content div.header-title {
+      background: #1233DD;
+      padding: 10px;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3); }
+      div.row section.content div.list-content div.header-title h2 {
+        font-size: 14px;
+        color: #fff; }
+        div.row section.content div.list-content div.header-title h2 i {
+          margin-right: 10px; }
+    div.row section.content div.list-content ul {
+      list-style: none; }
+      div.row section.content div.list-content ul li {
+        padding: 5px 0; }
+        @media (max-width: 768px) {
+          div.row section.content div.list-content ul li {
+            padding: 0; } }
+        div.row section.content div.list-content ul li div.item-content {
+          border-radius: 3px;
+          border: 1px solid #ddd;
+          margin-bottom: 4px; }
+          div.row section.content div.list-content ul li div.item-content::after {
+            content: "";
+            clear: both;
+            display: block; }
+          @media (max-width: 768px) {
+            div.row section.content div.list-content ul li div.item-content {
+              border-radius: 0;
+              margin: 0; } }
+          div.row section.content div.list-content ul li div.item-content div.thumbnail-content {
+            width: 15%;
+            height: 15%;
+            float: left;
+            padding: 10px;
+            overflow: hidden; }
+            @media (max-width: 500px) {
+              div.row section.content div.list-content ul li div.item-content div.thumbnail-content {
+                padding: 5px;
+                width: 25%; } }
+            div.row section.content div.list-content ul li div.item-content div.thumbnail-content img {
+              width: 100%; }
+          div.row section.content div.list-content ul li div.item-content div.description-content {
+            width: 85%;
+            float: left;
+            padding-top: 10px;
+            padding-left: 10px;
+            position: relative; }
+            @media (max-width: 500px) {
+              div.row section.content div.list-content ul li div.item-content div.description-content {
+                width: 75%; } }
+            div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song {
+              font-size: 22px;
+              line-height: 150%; }
+              @media (max-width: 960px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song {
+                  font-size: 16px; } }
+              @media (max-width: 500px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song {
+                  font-size: 12px; } }
+              div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song a {
+                text-decoration: none;
+                color: #555; }
+                div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song a:hover {
+                  color: #0F91DB; }
+            div.row section.content div.list-content ul li div.item-content div.description-content span.artist {
+              font-size: 16px;
+              display: block;
+              color: #888;
+              font-weight: 400;
+              line-height: 150%; }
+              @media (max-width: 768px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.artist {
+                  font-size: 12px; } }
+              @media (max-width: 500px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.artist {
+                  font-size: 10px; } }
+            div.row section.content div.list-content ul li div.item-content div.description-content span.file-info {
+              line-height: 150%;
+              color: #555;
+              font-weight: 500;
+              font-size: 15px;
+              display: block; }
+              @media (max-width: 768px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.file-info {
+                  font-size: 12px; } }
+              @media (max-width: 500px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.file-info {
+                  font-size: 10px; } }
+            div.row section.content div.list-content ul li div.item-content div.description-content span.duration {
+              position: absolute;
+              top: 20px;
+              color: #444;
+              font-weight: 500;
+              right: 20px; }
+              @media (max-width: 768px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.duration {
+                  top: 10px; } }
+              @media (max-width: 500px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.duration {
+                  display: none; } }
+  div.row aside.sidebar {
+    padding: 10px;
+    float: left;
+    width: 30%; }
+    @media (max-width: 768px) {
+      div.row aside.sidebar {
+        width: 100%;
+        padding: 0; } }
+    div.row aside.sidebar .list-category {
+      margin-bottom: 30px; }
+      @media (max-width: 768px) {
+        div.row aside.sidebar .list-category {
+          margin-bottom: 0; } }
+    div.row aside.sidebar div.header-title {
+      background: #E30C49;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      color: #fff;
+      margin-bottom: 8px; }
+      @media (max-width: 768px) {
+        div.row aside.sidebar div.header-title {
+          margin-bottom: 8px;
+          border-radius: 0;
+          padding: 5px; } }
+      div.row aside.sidebar div.header-title h2 {
+        font-size: 14px; }
+        div.row aside.sidebar div.header-title h2 i {
+          margin-right: 10px; }
+    div.row aside.sidebar ul {
+      list-style: none; }
+      div.row aside.sidebar ul li {
+        display: block; }
+        div.row aside.sidebar ul li a {
+          display: block;
+          margin: 3px 0;
+          background: #fff;
+          text-decoration: none;
+          font-size: 12px;
+          padding: 5px 10px;
+          border-left: 2px solid #5BF706;
+          color: #777;
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+footer {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 10px;
+  text-align: center; }
+  footer p {
+    color: #222; }
+  footer span {
+    font-size: 12px; }
+
+#pager {
+  font-family: 'Open Sans'; }
+  #pager ul li {
+    padding: 10px 1px;
+    display: inline-block; }
+    #pager ul li span {
+      background: #eee;
+      text-decoration: none;
+      display: block;
+      padding: 5px 10px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 2px; }
+    #pager ul li a {
+      text-decoration: none;
+      display: block;
+      padding: 5px 10px;
+      background: #3498db;
+      color: #fff;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 2px; }
+
+article {
+  line-height: 150%;
+  font-size: 15px;
+  padding: 10px; }
+  article hr {
+    border: none;
+    border-bottom: 1px solid #eee; }
+  article b {
+    font-weight: 600;
+    font-size: 14px; }
+  article h2 {
+    margin-bottom: 10px; }
+  article table.detail-music {
+    width: 80%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    border: 1px solid #f1c40f; }
+    @media (max-width: 768px) {
+      article table.detail-music {
+        width: 95%; } }
+    article table.detail-music td {
+      padding: 5px 10px; }
+    article table.detail-music thead tr td {
+      text-align: center;
+      border-radius: 3px;
+      color: #fff;
+      background: #f1c40f; }
+    article table.detail-music tbody tr td:nth-of-type(2) {
+      text-align: center; }
+    article table.detail-music tbody tr:nth-of-type(even) td {
+      background: #f8f8f8; }
+    article table.detail-music tbody tr:nth-of-type(odd) td {
+      background: #fafcfd; }
+  article .btn-download {
+    background: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none; }
+  article div.disclaimer {
+    border: 1px solid #3498db;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: #e1f0fa; }
+    @media (max-width: 768px) {
+      article div.disclaimer {
+        padding: 10px;
+        width: 95%;
+        font-size: 12px; } }
+    article div.disclaimer h3 {
+      margin-bottom: 10px; }
+      article div.disclaimer h3 b {
+        font-size: 20px;
+        color: #3498db; }
+    article div.disclaimer p {
+      color: #3498db; }
+      @media (max-width: 768px) {
+        article div.disclaimer p b {
+          font-size: 12px; } }
+  article .social-sharing {
+    margin-top: 10px; }
+    article .social-sharing td:nth-of-type(1) a {
+      background: #1976C5;
+      color: #fff; }
+    article .social-sharing td:nth-of-type(2) a {
+      background: #45C8FE;
+      color: #fff; }
+    article .social-sharing td:nth-of-type(3) a {
+      background: #DF190A;
+      color: #fff; }
+    article .social-sharing a {
+      background: #f8f8f8;
+      padding: 5px 10px;
+      display: block;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=style.css.map */

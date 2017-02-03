@@ -1,0 +1,23 @@
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /webmusic/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^search$ index.php?search=true
+
+
+RewriteRule ^page/([0-9]+)$ index.php?pages=true&page=$1 [NC,L]
+
+RewriteRule ^(([0-9a-zA-Z_-]+))$ index.php?category=$1 [NC,L]
+
+
+
+RewriteRule ^(([0-9a-zA-Z_-]+))/page/([0-9]+)$ index.php?category=$1&pages=true&page=$3 [NC,L]
+
+RewriteRule ^([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ index.php?category=$1&artist=$2 [NC,L]
+
+RewriteRule ^([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ index.php?category=$1&artist=$2&id=$3 [NC,L]

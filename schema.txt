@@ -1,0 +1,16 @@
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php?/u=$1 [L]
+
+# RewriteRule ^artist$ artist.php [NC,L]
+# RewriteRule ^artist/([0-9a-zA-Z_]+)$ artist.php?artist=$1 [NC,L]
+
+# RewriteRule ^category$ category.php [NC,L]
+# RewriteRule ^category/([0-9a-zA-Z_]+)$ category.php?category=$1 [NC,L]
+
+# RewriteRule ^detail/([0-9a-zA-Z_]+)/([0-9a-zA-Z_]+)$ detail.php?artist=$1&id=$2 [NC,L]
+
+
+# RewriteRule ^index/([0-9a-zA-Z_]+)$ index.php?category=$1
+
+

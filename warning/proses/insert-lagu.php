@@ -2,7 +2,6 @@
 
 include "../../app/start.php";
 include "../../app/DB.php";
-include "../koneksi.php";
 
 $idyoutube = mysql_real_escape_string($_POST['idyoutube']);
 $judulvideo = mysql_real_escape_string($_POST['judul-video']);
@@ -21,7 +20,7 @@ $link = mysql_real_escape_string($_POST['urllink']);
 $sql = "INSERT INTO tbmusic ";
 $sql .= "VALUES('', '$idyoutube', '$judulvideo', '$judullagu', '$duration', '$filesize', '$album', '$tahun', '$genre', '$tag', '$link', '$artist')";
 
-$query = mysql_query($sql) or die(mysql_error());
+$query = $db->query($sql);
 
 if($query){
 	header("location:".baseurl("warning/lagu.php?status=")."berhasil-tambah");

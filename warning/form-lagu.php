@@ -1,8 +1,6 @@
 <?php 
 include "../app/start.php";
 include "../app/DB.php";
-include "koneksi.php";
-
 
 $id = $_GET['id'];
 
@@ -17,7 +15,7 @@ $filesize = byte_to_mb($array->filesize);
 $url = "//www.youtubeinmp3.com/fetch/?video=https://www.youtube.com/watch?v={$id}";
 
 
-$queryartist = mysql_query("SELECT * FROM tbartist");
+$queryartist = $db->query("SELECT * FROM tbartist ORDER BY NamaArtist ASC")->fetchAll();
 
 ?>
 
@@ -68,7 +66,7 @@ $queryartist = mysql_query("SELECT * FROM tbartist");
                     </label>
                     <select class="form-control" name="artist" id="artist">
                         <option value="">- Pilih Artist -</option>
-                        <?php while($data = mysql_fetch_array($queryartist)){ ?>
+                        <?php foreach($queryartist as $data){ ?>
                         <option value="<?php echo $data['idartist']; ?>">
                         	<?php echo $data['NamaArtist']; ?>
                         </option>

@@ -13,11 +13,10 @@ if(isset($_GET['page'])){
     $offset = $p-1;
 }
 
-$querylagu = mysql_query("SELECT * FROM vlistmusic LIMIT $offset, $limit");
+$querylagu = $db->query("SELECT * FROM vlistmusic LIMIT $offset, $limit")->fetchAll();
 
-$querytotal = mysql_query("SELECT * FROM vlistmusic");
-
-$total = mysql_num_rows($querytotal);
+$querytotal = $db->query(dbselect("vlistmusic"))->fetchAll();
+$total = count($querytotal);
 $page = ceil($total/$limit);
 
 
@@ -53,7 +52,7 @@ $page = ceil($total/$limit);
             </div>
             <ul>
                 <?php
-                    while($data = mysql_fetch_array($querylagu)){
+                    foreach($querylagu as $data){
                         include "partials/item-lagu.php"; 
                     } 
                  ?>
@@ -99,15 +98,16 @@ $page = ceil($total/$limit);
     </section>
     <aside class="sidebar">
         <?php
-            $querykategori = mysql_query("SELECT * FROM tbkategori"); 
-            while($datakategori = mysql_fetch_array($querykategori)){
-            $SlugKategori = $datakategori['SlugKategori']; 
-        
-            $querymusic = mysql_query("SELECT * FROM vlistmusic WHERE SlugKategori='$SlugKategori' LIMIT 5");
-
+            $querykategori = $db->query(dbselect("tbkategori"))->fetchAll(); 
             
+            foreach($querykategori as $datakategori){
+            
+                $SlugKategori = $datakategori['SlugKategori']; 
+        
+                $querymusic = $db->query(dbselect_where("vlistmusic", "SlugKategori='$SlugKategori' LIMIT 5"))->fetchAll();
 
-            if(mysql_num_rows($querymusic) > 0){
+
+            if(count($querymusic) > 0){
         ?>
         <div class="list-category">
             <div class="header-title">
@@ -119,7 +119,7 @@ $page = ceil($total/$limit);
             <ul>
                 <?php
                 
-                while($datamusic = mysql_fetch_array($querymusic)){ 
+                foreach($querymusic as $datamusic){ 
                 ?>
                 <li>
                     <a href="#">

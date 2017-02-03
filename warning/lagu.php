@@ -1,13 +1,12 @@
 <?php 
 include "../app/start.php";
 include "../app/DB.php";
-include "koneksi.php";
 
 if(isset($_GET['q'])){
 	$q = $_GET['q'];
-	$query = mysql_query("SELECT * FROM vlistmusic WHERE Title LIKE '%$q%'");
+	$query = $db->query("SELECT * FROM vlistmusic WHERE Title LIKE '%$q%'")->fetchAll();
 } else {
-	$query = mysql_query("SELECT * FROM vlistmusic");
+	$query = $db->query("SELECT * FROM vlistmusic")->fetchAll();
 }
 ?>
 
@@ -91,7 +90,7 @@ if(isset($_GET['q'])){
 						<tbody>
 							<?php 
 								$i=1;;
-								while($data = mysql_fetch_array($query)){ ?>
+								foreach($query as $data){ ?>
 							<tr>
 								<td><?php echo $i++; ?></td>
 								<td><?php echo $data['Title']; ?></td>

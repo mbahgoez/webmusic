@@ -59,15 +59,16 @@
         </a>
     </li>
     <?php 
-    $query = mysql_query("SELECT * FROM tbkategori");
-
-
+    $tbkategori = $db->query(dbselect("tbkategori"))->fetchAll();
     
     
-    while($data = mysql_fetch_array($query)){
+    foreach($tbkategori as $data){
         $SlugKategori = $data['SlugKategori'];
-        $querysong = mysql_query("SELECT * FROM vlistmusic WHERE SlugKategori='$SlugKategori'");
-        if(mysql_num_rows($querysong) > 0){
+        $querysong = dbselect_where("vlistmusic", "SlugKategori='$SlugKategori'");
+
+        $datasong = $db->query($querysong)->fetchAll();
+        
+        if(count($datasong) > 0){
         ?>
         <li>
             <a href="<?php echo baseurl($data['SlugKategori']); ?>">

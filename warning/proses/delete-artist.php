@@ -1,11 +1,12 @@
 <?php
-include '../koneksi.php';
+include '../../app/DB.php';
 include "../../app/start.php";
+
 $id = $_GET['id'];
 
 $sql = "DELETE FROM tbartist WHERE idartist='$id'";
 
-$query = mysql_query($sql);
+$query = $db->query($sql);
 
 
 if($query){

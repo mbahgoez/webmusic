@@ -53,11 +53,10 @@ include "../app/DB.php";
 						</thead>
 						<tbody>
 						<?php 
-						include "koneksi.php";
-						$query = mysql_query("SELECT * FROM tbkategori");
+						$query = $db->query("SELECT * FROM tbkategori")->fetchAll();
 						$i = 1;
 
-						while($data = mysql_fetch_array($query)){ ?>
+						foreach($query as $data){?>
 							<tr>
 								<td><?php echo $i++; ?></td>
 								<td><?php echo $data['NamaKategori'] ?></td>
@@ -83,8 +82,10 @@ include "../app/DB.php";
 				<?php
 				if(isset($_GET['editid'])){
 					$id = $_GET['editid'];
-					$query = mysql_query("SELECT * FROM tbkategori WHERE idkategori='$id'");
-					$data = mysql_fetch_array($query);
+					$query = $db->query(
+						dbselect_where("tbkategori", "idkategori='$id'")
+					);
+					$data = $query->fetchAll()[0];
 					?>
 					<form action="proses/update-kategori.php" method="POST">
 					<input type="hidden" name="id" value="<?php echo $data['idkategori']; ?>">

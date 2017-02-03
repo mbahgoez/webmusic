@@ -1,6 +1,4 @@
 <?php
-
-include "warning/koneksi.php";
 include "app/start.php";
 include "app/DB.php";
 

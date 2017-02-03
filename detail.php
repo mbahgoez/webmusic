@@ -4,16 +4,18 @@
     $artist = $_GET['artist'];
     $id = $_GET['id'];
 
-    $queryartist = mysql_query("SELECT * FROM tbartist WHERE SlugArtist='$artist'");
-    $dataartist = mysql_fetch_array($queryartist);
-    $SlugArtist = $dataartist['SlugArtist'];
-
-    $querykategori = mysql_query("SELECT * FROM tbkategori WHERE SlugKategori='$cat'");
-    $datakategori = mysql_fetch_array($querykategori);
+    $querykategori = dbselect_where("tbkategori", "SlugKategori='$cat'");
+    $datakategori = $db->query($querykategori)->fetchAll()[0];
     $SlugKategori = $datakategori['SlugKategori'];
 
-    $querydetail = mysql_query("SELECT * FROM vlistmusic WHERE idyoutube='$id'");
-    $datadetail = mysql_fetch_array($querydetail);
+    $queryartist = dbselect_where("tbartist", "SlugArtist='$artist'");
+    $dataartist = $db->query($queryartist)->fetchAll()[0];
+    $SlugArtist = $dataartist['SlugArtist'];
+
+    
+
+    $querydetail = dbselect_where("vlistmusic", "idyoutube='$id'");
+    $datadetail = $db->query($querydetail)->fetchAll()[0];
     $id = $datadetail['idyoutube'];
 
 ?>

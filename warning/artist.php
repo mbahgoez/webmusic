@@ -55,11 +55,10 @@ include "../app/DB.php";
                     <tbody>
 
                     <?php
-                    include "koneksi.php";
-                    $query = mysql_query("SELECT * FROM vartist ORDER BY NamaArtist ASC");
+                    $query = $db->query("SELECT * FROM vartist ORDER BY NamaArtist ASC")->fetchAll();
                     $i = 1;
 
-                    while ($data = mysql_fetch_array($query)) { ?>
+                    foreach($query as $data) { ?>
                         <tr>
                             <td><?php echo $i++; ?></td>
                             <td><?php echo $data['NamaArtist']; ?></td>
@@ -105,8 +104,8 @@ include "../app/DB.php";
                         <option value="">- Pilih Kategori -</option>
 
                         <?php
-                        $query = mysql_query("SELECT * FROM tbkategori");
-                        while ($data = mysql_fetch_array($query)) {
+                        $query = $db->query("SELECT * FROM tbkategori");
+                        foreach ($query as $data) {
                             ?>
                             <option
                                 value="<?php echo $data['idkategori']; ?>"><?php echo $data['NamaKategori'] ?></option>

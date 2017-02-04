@@ -1,23 +1,7 @@
 <?php 
 
-$limit = 10;
-
-if(isset($_GET['page'])){
-    // Paging By Page Number
-    $p = $_GET['page'];
-    $offset = ($p-1)*$limit;
-        
-} else {
-    // Reset Page Default
-    $p = 1;
-    $offset = $p-1;
-}
-
-$querylagu = $db->query("SELECT * FROM vlistmusic LIMIT $offset, $limit")->fetchAll();
-
-$querytotal = $db->query(dbselect("vlistmusic"))->fetchAll();
-$total = count($querytotal);
-$page = ceil($total/$limit);
+$q = $_POST['q'];
+$querylagu = $db->query("SELECT * FROM vlistmusic WHERE Title LIKE '%$q%'")->fetchAll();
 
 
 ?>

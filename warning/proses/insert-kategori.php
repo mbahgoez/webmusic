@@ -1,6 +1,7 @@
 <?php 
 
 include "../../app/DB.php";
+include "../../app/start.php";
 
 $namakategori = $_POST['nama-kategori'];
 $slugkategori = $_POST['slug-kategori'];
@@ -14,7 +15,7 @@ if(count($queryselect->fetchAll()) == 0){
 	$query = $db->query($sql);
 
 	if($query){
-		header("location:http://localhost/webmusic/warning/kategori.php");
+		header("location:".baseurl("/warning/kategori.php"));
 	}
 } else {
 	echo "Slug sudah ada";

@@ -12,7 +12,7 @@ $queryselect = $db->query("SELECT * FROM tbkategori WHERE SlugKategori='$slugkat
 if(count($queryselect->fetchAll()) == 0){
 
 	$sql = "INSERT INTO tbkategori VALUES('', '$namakategori', '$slugkategori')";
-	$query = $db->query($sql);
+	$query = $db->exec($sql);
 
 	if($query){
 		header("location:".baseurl("/warning/kategori.php"));

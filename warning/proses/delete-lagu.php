@@ -1,11 +1,12 @@
 <?php
-include '../koneksi.php';
+include "../../app/DB.php";
 include "../../app/start.php";
+
 $id = $_GET['id'];
 
 $sql = "DELETE FROM tbmusic WHERE idmusic='$id'";
 
-$query = mysql_query($sql);
+$query = $db->exec($sql);
 
 
 if($query){

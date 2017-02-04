@@ -6,7 +6,7 @@ $id = $_GET['id'];
 
 $sql = "DELETE FROM tbkategori WHERE idkategori='$id'";
 
-$query = $db->query($sql);
+$query = $db->exec($sql);
 
 
 if($query){

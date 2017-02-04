@@ -11,7 +11,7 @@ $sql .= "NamaKategori='$namakategori', ";
 $sql .= "SlugKategori='$slugkategori' ";
 $sql .= "WHERE idkategori='$id'";
 
-$query = $db->query($sql);
+$query = $db->exec($sql);
 
 if($query){
 	header("location:http://localhost/webmusic/warning/kategori.php?status=berhasil-diperbarui");

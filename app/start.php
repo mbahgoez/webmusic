@@ -1,9 +1,7 @@
 <?php
 
-ini_set("display_errors", "On");
-
 define('TITLE', 'Dapatmp3');
-define('DESC', 'Download Kumpulan Lagu Terbaru dan Terlengkap Baik Dalam dan Luar Negeri
+define('DESC', 'Download Kumpulan Lagu Terbaru dan Terlaris Baik Dalam dan Luar Negeri
 ');
 
 function currentUrl(){
@@ -20,9 +18,9 @@ function urlprint($url)
 function baseurl($url = null)
 {
     if (isset($url)) {
-        $host = "http://localhost/webmusic/" . $url;
+        $host = "http://dapatmp3.ga/" . $url;
     } else {
-        $host = "http://localhost/webmusic";
+        $host = "http://dapatmp3.ga";
     }
     return $host;
 }

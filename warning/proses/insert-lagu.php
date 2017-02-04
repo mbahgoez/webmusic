@@ -20,7 +20,7 @@ $link = mysql_real_escape_string($_POST['urllink']);
 $sql = "INSERT INTO tbmusic ";
 $sql .= "VALUES('', '$idyoutube', '$judulvideo', '$judullagu', '$duration', '$filesize', '$album', '$tahun', '$genre', '$tag', '$link', '$artist')";
 
-$query = $db->query($sql);
+$query = $db->exec($sql);
 
 if($query){
 	header("location:".baseurl("warning/lagu.php?status=")."berhasil-tambah");

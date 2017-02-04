@@ -2,8 +2,8 @@
 
 ini_set("display_errors", "On");
 
-define('TITLE', 'Musicfeel.ga');
-define('DESC', 'Download Kumpulan Lagu Terbaru dan Terlaris Baik Dalam dan Luar Negeri
+define('TITLE', 'Dapatmp3');
+define('DESC', 'Download Kumpulan Lagu Terbaru dan Terlengkap Baik Dalam dan Luar Negeri
 ');
 
 function currentUrl(){

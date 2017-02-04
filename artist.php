@@ -1,11 +1,9 @@
 <?php 
 	$kategori = $_GET['category'];
-	$querykategori = mysql_query("SELECT NamaKategori FROM tbkategori WHERE SlugKategori='$kategori'");
-	$datakategori = mysql_fetch_array($querykategori);
+	$datakategori = $db->query("SELECT NamaKategori FROM tbkategori WHERE SlugKategori='$kategori'")->fetchAll()[0];
 
 	$artist = $_GET['artist'];
-	$queryartist = mysql_query("SELECT NamaArtist FROM tbartist WHERE SlugArtist='$artist'");
-	$dataartist = mysql_fetch_array($queryartist);
+	$dataartist = $db->query("SELECT NamaArtist FROM tbartist WHERE SlugArtist='$artist'")->fetchAll()[0];
 ?>
 
 <div class="row">

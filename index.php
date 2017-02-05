@@ -4,6 +4,8 @@ include "app/DB.php";
 
 include "partials/head.php";
 include "tracking-analytics.php";
+
+print_r($_SERVER);
 ?>
 
 

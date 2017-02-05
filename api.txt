@@ -1,0 +1,10 @@
+/api/lagu
+/api/lagu/jwnfjrnf
+
+/api/kategori
+/api/kategori/:id
+/api/kategori/:idyoutube
+
+/api/artist
+/api/artist/:id
+

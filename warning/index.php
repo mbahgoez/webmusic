@@ -1,6 +1,8 @@
 <?php 
 include "../app/start.php";
 include "../app/DB.php";
+
+print_r($_SERVER);
 ?>
 
 

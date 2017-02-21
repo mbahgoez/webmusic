@@ -8,15 +8,24 @@
                 <a href="<?php echo baseurl($data['SlugKategori']."/".$data['SlugArtist'])."/".$data['idyoutube']; ?>">
                     <?php echo $data['Title']; ?>                    
                 </a>
-            </h2>            
-            <span class="artist">
-                <?php echo $data['Album']; ?>
-            </span>
+            </h2>
             <span class="file-info">
-                Ukuran : <?php echo $data['Filesize'] ?>, Type : Audio (.mp3)
+                Ukuran : <?php echo $data['Filesize'] ?>, 
+                Duration : <?php echo $data['Duration']; ?>
+                Type : Audio (.mp3)
+            </span>
+            <span class="action">
+                <a href="" class="btn1">
+                    <i class="ion-cloud"></i>
+                    Download (<?php echo $data['Filesize']; ?>)
+                    </a> |
+                <a href="" class="btn2">
+                    <i class="ion-link"></i>
+                    Download Sekarang
+                </a>
             </span>
             <span class="duration">
-                <?php echo $data['Duration']; ?>   
+                <?php // echo $data['Duration']; ?>   
             </span>
         </div>
     </div>

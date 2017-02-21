@@ -252,8 +252,7 @@ div.row {
             overflow: hidden; }
             @media (max-width: 500px) {
               div.row section.content div.list-content ul li div.item-content div.thumbnail-content {
-                padding: 5px;
-                width: 25%; } }
+                display: none; } }
             div.row section.content div.list-content ul li div.item-content div.thumbnail-content img {
               width: 100%; }
           div.row section.content div.list-content ul li div.item-content div.description-content {
@@ -264,19 +263,19 @@ div.row {
             position: relative; }
             @media (max-width: 500px) {
               div.row section.content div.list-content ul li div.item-content div.description-content {
-                width: 75%; } }
+                width: 100%; } }
             div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song {
-              font-size: 22px;
+              font-size: 14px;
               line-height: 150%; }
               @media (max-width: 960px) {
                 div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song {
-                  font-size: 16px; } }
+                  font-size: 14px; } }
               @media (max-width: 500px) {
                 div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song {
-                  font-size: 12px; } }
+                  font-size: 14px; } }
               div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song a {
                 text-decoration: none;
-                color: #555; }
+                color: #C82121; }
                 div.row section.content div.list-content ul li div.item-content div.description-content h2.title-song a:hover {
                   color: #0F91DB; }
             div.row section.content div.list-content ul li div.item-content div.description-content span.artist {
@@ -295,13 +294,36 @@ div.row {
               line-height: 150%;
               color: #555;
               font-weight: 500;
-              font-size: 15px;
+              font-size: 10px;
               display: block; }
               @media (max-width: 768px) {
                 div.row section.content div.list-content ul li div.item-content div.description-content span.file-info {
                   font-size: 12px; } }
               @media (max-width: 500px) {
                 div.row section.content div.list-content ul li div.item-content div.description-content span.file-info {
+                  font-size: 10px; } }
+            div.row section.content div.list-content ul li div.item-content div.description-content span.action a {
+              font-size: 12px;
+              color: #ECAF0A;
+              font-weight: 500;
+              text-decoration: none;
+              padding: 3px 8px;
+              box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3); }
+              div.row section.content div.list-content ul li div.item-content div.description-content span.action a.btn1 {
+                color: #60036E; }
+                div.row section.content div.list-content ul li div.item-content div.description-content span.action a.btn1:hover {
+                  color: #fff;
+                  background: #60036e; }
+              div.row section.content div.list-content ul li div.item-content div.description-content span.action a.btn2 {
+                color: #4BD500; }
+                div.row section.content div.list-content ul li div.item-content div.description-content span.action a.btn2:hover {
+                  color: #fff;
+                  background: #4BD500; }
+              div.row section.content div.list-content ul li div.item-content div.description-content span.action a:hover {
+                text-decoration: underline; }
+              @media (max-width: 500px) {
+                div.row section.content div.list-content ul li div.item-content div.description-content span.action a {
+                  padding: 3px 5px;
                   font-size: 10px; } }
             div.row section.content div.list-content ul li div.item-content div.description-content span.duration {
               position: absolute;

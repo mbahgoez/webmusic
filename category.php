@@ -34,7 +34,7 @@ $page = ceil($total/$limit);
             <li>
                 <a href="<?php echo baseurl(); ?>">
                     <i class="ion-home"></i>
-                    <span itemprop="name">Home</span>
+                    <span>Home</span>
                 </a>
             </li>
             <li><span>/</span></li>

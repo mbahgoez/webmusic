@@ -332,8 +332,7 @@ div.row {
                             padding: 10px;
                             overflow: hidden;
                             @include r500 {
-                                padding: 5px;
-                                width: 25%;
+                                display: none;
                             }
                             img {
                                 // box-shadow: 0 1px 1px 0 rgba(0,0,0,0.4);
@@ -347,20 +346,20 @@ div.row {
                             padding-left: 10px;
                             position: relative;
                             @include r500 {
-                                width: 75%;
+                                width: 100%;
                             }
                             h2.title-song {
-                                font-size: 22px;
+                                font-size: 14px;
                                 line-height: 150%;
                                 @include r960 {
-                                    font-size: 16px;
+                                    font-size: 14px;
                                 }
                                 @include r500 {
-                                    font-size: 12px;
+                                    font-size: 14px;
                                 }
                                 a {
                                     text-decoration: none;
-                                    color: #555;
+                                    color: #C82121;
                                     &:hover {
                                         color: #0F91DB;
                                     }
@@ -383,13 +382,44 @@ div.row {
                                 line-height: 150%;
                                 color: #555;
                                 font-weight: 500;
-                                font-size: 15px;
+                                font-size: 10px;
                                 display: block;
                                 @include r768 {
                                     font-size: 12px;
                                 }
                                 @include r500 {
                                     font-size: 10px;
+                                }
+                            }
+                            span.action {
+                                a {
+                                    font-size:12px;
+                                    color:#ECAF0A;
+                                    font-weight: 500;
+                                    text-decoration: none;
+                                    padding: 3px 8px;
+                                    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
+                                    &.btn1 {
+                                        color:#60036E;
+                                        &:hover {
+                                            color:#fff;
+                                            background: #60036e;
+                                        }
+                                    }
+                                    &.btn2 {
+                                        color:#4BD500;
+                                        &:hover {
+                                            color:#fff;
+                                            background: #4BD500;
+                                        }
+                                    }
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                    @include r500 {
+                                        padding:3px 5px;
+                                        font-size: 10px;
+                                    }
                                 }
                             }
                             span.duration {

@@ -24,20 +24,19 @@ $page = ceil($total/$limit);
 
 <div class="row">
     <div id="breadcrumb">
-        <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <a href="<?php echo baseurl(); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+        <ul>
+            <li>
+                <a href="<?php echo baseurl(); ?>">
                     <i class="ion-home"></i>
-                    <span itemprop="name">Home</span>
+                    Home
                 </a>
-                <meta itemprop="position" content="1" />
             </li>
             <li><span>/</span></li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <a href="<?php echo baseurl(); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
                     <span itemprop="name">Terbaru</span>
                 </a>
-                <meta itemprop="position" content="2" />
+                <meta itemprop="position" content="1" />
             </li>
         </ul>
     </div>
@@ -122,7 +121,7 @@ $page = ceil($total/$limit);
                 foreach($querymusic as $datamusic){ 
                 ?>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo baseurl($datamusic['SlugKategori']."/".$datamusic['SlugArtist'])."/".$datamusic['idyoutube']; ?>">
                         <?php echo $datamusic['Title']; ?>
                     </a>
                 </li>

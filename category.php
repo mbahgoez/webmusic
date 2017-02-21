@@ -31,19 +31,18 @@ $page = ceil($total/$limit);
 <div class="row">
     <div id="breadcrumb">
         <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <a href="<?php echo baseurl(); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+            <li>
+                <a href="<?php echo baseurl(); ?>">
                     <i class="ion-home"></i>
-                    <span itemprop="name">Home</span>
+                    <span>Home</span>
                 </a>
-                <meta itemprop="position" content="1" />
             </li>
             <li><span>/</span></li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <a href="<?php echo baseurl($kategori); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
                     <span itemprop="name"><?php echo $datakategori['NamaKategori']; ?></span>
                 </a>
-                <meta itemprop="position" content="2" />
+                <meta itemprop="position" content="1" />
             </li>
         </ul>
     </div>

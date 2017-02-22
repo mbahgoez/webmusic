@@ -24,11 +24,11 @@ $page = ceil($total/$limit);
 
 <div class="row">
     <div id="breadcrumb">
-        <ul>
+        <ul itemscope itemtype="http://schema.org/BreadcrumbList">
             <li>
                 <a href="<?php echo baseurl(); ?>">
                     <i class="ion-home"></i>
-                    Home
+                    <span>Home</span>
                 </a>
             </li>
             <li><span>/</span></li>

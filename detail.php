@@ -26,8 +26,8 @@
                     <a href="<?php echo baseurl(); ?>">
                         <i class="ion-home"></i>
                         Home
-                        </li>
-                    </a>
+                  </a>
+                </li>
                 <li><span>/</span></li>
                 
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -38,23 +38,35 @@
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
+
+                <li><span>/</span></li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a href="<?php echo baseurl($SlugKategori); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+                        <span itemprop="name">
+                            <?php echo $datakategori['NamaKategori']; ?>
+                        </span>    
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+
                 <li><span>/</span></li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <a href="<?php echo baseurl($SlugKategori.'/'.$SlugArtist); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                    <span itemprop="name">
-                        <?php echo $dataartist['NamaArtist']; ?>
-                    </span>
+                        <span itemprop="name">
+                            <?php echo $dataartist['NamaArtist']; ?>
+                        </span>
                     </a>
-                    <meta itemprop="position" content="2" />
-                </li>
+                    <meta itemprop="position" content="2">
+              </li>
+
                 <li><span>/</span></li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <a href="<?php echo baseurl($SlugKategori.'/'.$SlugArtist.'/'. $id); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                    <span itemprop="name">
-                        <?php echo $datadetail['Track']; ?>
-                    </span>
+                        <span itemprop="name">
+                            <?php echo $datadetail['Track']; ?>
+                        </span>
                     </a>
-                    <meta itemprop="position" content="3" />
+                    <meta itemprop="position" content="3">
                 </li>
             </ul>
         </div>

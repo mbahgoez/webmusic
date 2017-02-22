@@ -46,12 +46,12 @@ if(isset($_GET['category']) && isset($_GET['artist']) && isset($_GET['id'])){
 <meta name="image" content="<?php echo $thumb; ?>">
 <meta name="og:image" content="<?php echo $thumb; ?>">
 
-<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
+<!-- <script>
 $(document).ready(function() {
     $("#pager ul").children("").wrap("<li></li>");
 });

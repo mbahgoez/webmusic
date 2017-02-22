@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Restricted Area"
-AuthUserFile C:\xampp\htdocs\WebMusic\warning\.htpasswd
+AuthUserFile /home/u664647819/public_html/warning/.htpasswd
 require valid-user

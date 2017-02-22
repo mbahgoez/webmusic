@@ -28,16 +28,6 @@
                         Home
                   </a>
                 </li>
-                <li><span>/</span></li>
-                
-                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a href="<?php echo baseurl($SlugKategori); ?>" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                     <span itemprop="name">
-                        <?php echo $datakategori['NamaKategori']; ?>    
-                     </span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </li>
 
                 <li><span>/</span></li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
